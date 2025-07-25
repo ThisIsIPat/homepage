@@ -90,27 +90,6 @@ const TestimonialsSection = () => {
           ))}
         </div>
 
-        {/* Trust Indicators */}
-        <div className="text-center">
-          <Card className="bg-gradient-to-r from-primary/5 to-accent/5 border-primary/20 max-w-3xl mx-auto">
-            <CardContent className="p-8">
-              <div className="grid md:grid-cols-3 gap-6 text-center">
-                <div>
-                  <div className="text-3xl font-bold text-primary mb-2">50+</div>
-                  <div className="text-muted-foreground">Successful Projects</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-primary mb-2">$10M+</div>
-                  <div className="text-muted-foreground">Funding Raised by Clients</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-primary mb-2">99%</div>
-                  <div className="text-muted-foreground">Client Satisfaction</div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
       </div>
     </section>
   );

@@ -9,15 +9,15 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8 items-center">
           {/* Brand & Contact */}
           <div>
-            <div className="text-2xl font-bold mb-4">Alex Chen</div>
+            <div className="text-2xl font-bold mb-4">Patrick Hein</div>
             <p className="text-background/80 mb-4">
               Software Engineer & Startup Consultant
             </p>
             <a 
-              href="mailto:alex@alexchen.dev" 
+              href="mailto:patrick@hein.so" 
               className="text-background/80 hover:text-background transition-colors"
             >
-              alex@alexchen.dev
+              patrick@hein.so
             </a>
           </div>
 
@@ -61,7 +61,7 @@ const Footer = () => {
                 <Github className="w-5 h-5" />
               </a>
               <a
-                href="mailto:alex@alexchen.dev"
+                href="mailto:patrick@hein.so"
                 className="p-2 bg-background/10 rounded-lg hover:bg-background/20 transition-colors"
               >
                 <Mail className="w-5 h-5" />
@@ -74,7 +74,7 @@ const Footer = () => {
         <div className="border-t border-background/20 mt-8 pt-8 text-center">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-background/60 text-sm">
-              © {currentYear} Alex Chen. All rights reserved.
+              © {currentYear} Patrick Hein. All rights reserved.
             </p>
             <div className="flex gap-6 text-sm">
               <a href="/privacy" className="text-background/60 hover:text-background transition-colors">

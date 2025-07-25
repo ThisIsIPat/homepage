@@ -116,7 +116,7 @@ const BookingSection = () => {
                       variant="hero" 
                       size="lg" 
                       className="w-full text-lg group"
-                      onClick={() => window.open("https://calendly.com/alexchen-strategy", "_blank")}
+                      onClick={() => window.open("https://calendly.com/patrick-strategy", "_blank")}
                     >
                       Schedule Now - It's Free
                       <ArrowRight className="group-hover:translate-x-1 transition-transform" />
@@ -151,7 +151,7 @@ const BookingSection = () => {
                     Send me a brief description of your project and I'll respond with initial thoughts and availability.
                   </p>
                   <Button variant="outline" className="w-full">
-                    alex@alexchen.dev
+                    patrick@hein.so
                   </Button>
                 </CardContent>
               </Card>

@@ -7,8 +7,8 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 py-16">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
-          <div className="space-y-8">
-            <div className="space-y-4">
+          <div className="space-y-8 lg:pr-8">
+            <div className="space-y-6 pl-6">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
                 From Idea to Impact:
                 <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent block">
@@ -16,7 +16,7 @@ const HeroSection = () => {
                 </span>
               </h1>
               
-              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl">
+              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl pl-2">
                 Leveraging deep expertise in Cloud Computing, AI, and Data Engineering with a focus on data modeling, 
                 I partner with startups and businesses to build robust MVPs, scalable systems, and optimize critical workflows for growth. 
                 My founder background ensures a strategic, business-driven approach to every technical solution.
@@ -24,7 +24,7 @@ const HeroSection = () => {
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 pl-6">
               <Button variant="hero" size="lg" className="group">
                 Book a Strategy Call
                 <ArrowRight className="group-hover:translate-x-1 transition-transform" />
