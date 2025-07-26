@@ -8,8 +8,8 @@ const Header = () => {
   const navItems = [
     { label: "Home", href: "#home" },
     { label: "Services", href: "#services" },
-    { label: "Portfolio", href: "#portfolio" },
-    { label: "Testimonials", href: "#testimonials" },
+    //{ label: "Portfolio", href: "#portfolio" },
+    //{ label: "Testimonials", href: "#testimonials" },
     { label: "Book a Call", href: "#booking", isHighlight: true },
   ];
 

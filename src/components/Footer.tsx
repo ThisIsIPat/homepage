@@ -45,7 +45,7 @@ const Footer = () => {
             <h4 className="font-semibold mb-4">Connect</h4>
             <div className="flex justify-center md:justify-end gap-4">
               <a
-                href="https://linkedin.com/in/alexchen-dev"
+                href="https://www.linkedin.com/in/patrick-hein/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 bg-background/10 rounded-lg hover:bg-background/20 transition-colors"
@@ -53,7 +53,7 @@ const Footer = () => {
                 <Linkedin className="w-5 h-5" />
               </a>
               <a
-                href="https://github.com/alexchen-dev"
+                href="https://github.com/ThisIsIPat"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 bg-background/10 rounded-lg hover:bg-background/20 transition-colors"

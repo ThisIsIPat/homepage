@@ -29,9 +29,9 @@ const HeroSection = () => {
                 Book a Strategy Call
                 <ArrowRight className="group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button variant="outline" size="lg">
+              {/*<Button variant="outline" size="lg">
                 View My Work
-              </Button>
+              </Button>*/}
             </div>
 
             {/* Quick Stats/Highlights */}
@@ -62,7 +62,7 @@ const HeroSection = () => {
             <div className="relative z-10">
               <img
                 src="/lovable-uploads/3258b639-3bab-4a12-bef5-307ef6ab21b0.png"
-                alt="Alex Chen - Software Engineer & Startup Consultant"
+                alt="Patrick Hein - Software Engineer & Startup Consultant"
                 className="w-full max-w-md mx-auto rounded-2xl shadow-2xl"
               />
             </div>
