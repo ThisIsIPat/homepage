@@ -6,7 +6,7 @@ import { ExternalLink, Github, Rocket, Brain, Database, Workflow } from "lucide-
 const PortfolioSection = () => {
   const portfolioCategories = [
     {
-      title: "Startup MVPs & Product Launches",
+      title: "Startup Prototypes, MVPs & Product Launches",
       icon: Rocket,
       projects: [
         {

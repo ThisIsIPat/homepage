@@ -11,6 +11,7 @@ import {
   Zap,
   ArrowRight 
 } from "lucide-react";
+import { openCalendly } from "@/lib/utils";
 
 const ServicesSection = () => {
   const serviceCategories = [
@@ -143,8 +144,8 @@ const ServicesSection = () => {
               <p className="text-muted-foreground mb-6">
                 Let's discuss how my technical expertise and founder experience can accelerate your business goals.
               </p>
-              <Button variant="cta" size="lg" className="group">
-                Schedule Your Strategy Call
+              <Button variant="cta" size="lg" className="group" onClick={openCalendly}>
+                Call me - It's Free!
                 <ArrowRight className="group-hover:translate-x-1 transition-transform" />
               </Button>
             </CardContent>

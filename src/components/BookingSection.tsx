@@ -1,6 +1,9 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, ArrowRight, Calendar, MessageSquare, Rocket, Target } from "lucide-react";
+import ContactForm from "./ContactForm";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import CalendlyModal from "./CalendlyModal";
 
 const BookingSection = () => {
   const processSteps = [
@@ -100,59 +103,58 @@ const BookingSection = () => {
             {/* Right Column - Booking CTA */}
             <div className="space-y-6">
               <Card className="bg-gradient-to-br from-primary/5 to-accent/5 border-primary/20">
-                <CardContent className="p-8 text-center">
-                  <div className="mb-6">
-                    <Calendar className="w-16 h-16 text-primary mx-auto mb-4" />
-                    <h3 className="text-2xl font-bold text-foreground mb-3">
-                      Book Your Strategy Call
-                    </h3>
-                    <p className="text-muted-foreground">
-                      30-minute focused consultation to discuss your technical needs and growth strategy.
-                    </p>
-                  </div>
-
-                  <div className="space-y-4">
-                    <Button 
-                      variant="hero" 
-                      size="lg" 
-                      className="w-full text-lg group"
-                      onClick={() => window.open("https://calendly.com/patrick-strategy", "_blank")}
-                    >
-                      Schedule Now - It's Free
-                      <ArrowRight className="group-hover:translate-x-1 transition-transform" />
-                    </Button>
+                <CardContent className="p-8">
+                  <Tabs defaultValue="text" className="w-full">
+                    <TabsList className="grid w-full grid-cols-2 mb-6">
+                      <TabsTrigger value="text" className="flex items-center gap-2">
+                        <MessageSquare className="w-4 h-4" />
+                        Text
+                      </TabsTrigger>
+                      <TabsTrigger value="call" className="flex items-center gap-2">
+                        <Calendar className="w-4 h-4" />
+                        Call
+                      </TabsTrigger>
+                    </TabsList>
                     
-                    <div className="text-sm text-muted-foreground">
-                      Usually responds within 2 hours
-                    </div>
-                  </div>
+                    <TabsContent value="text">
+                      <ContactForm />
+                    </TabsContent>
+                    
+                    <TabsContent value="call" className="space-y-4">
+                      <div className="text-center">
+                        <Calendar className="w-16 h-16 text-primary mx-auto mb-4" />
+                        <h3 className="text-2xl font-bold text-foreground mb-3">
+                          Book Your Strategy Call
+                        </h3>
+                        <p className="text-muted-foreground mb-6">
+                          30-minute focused consultation to discuss your technical needs and growth strategy.
+                        </p>
+                        
+                        <CalendlyModal 
+                          variant="default" 
+                          size="lg" 
+                          className="w-full text-lg group bg-orange-500 hover:bg-orange-600 text-white"
+                        >
+                          Schedule Now - It's Free
+                          <ArrowRight className="group-hover:translate-x-1 transition-transform" />
+                        </CalendlyModal>
 
-                  {/* Quick Facts */}
-                  <div className="mt-8 pt-6 border-t border-border">
-                    <div className="grid grid-cols-2 gap-4 text-center">
-                      <div>
-                        <div className="font-semibold text-primary">30 min</div>
-                        <div className="text-xs text-muted-foreground">Duration</div>
+                        {/* Quick Facts */}
+                        <div className="mt-8 pt-6 border-t border-border">
+                          <div className="grid grid-cols-2 gap-4 text-center">
+                            <div>
+                              <div className="font-semibold text-primary">30 min</div>
+                              <div className="text-xs text-muted-foreground">Duration</div>
+                            </div>
+                            <div>
+                              <div className="font-semibold text-primary">Free</div>
+                              <div className="text-xs text-muted-foreground">No Cost</div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                      <div>
-                        <div className="font-semibold text-primary">Free</div>
-                        <div className="text-xs text-muted-foreground">No Cost</div>
-                      </div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              {/* Contact Alternative */}
-              <Card>
-                <CardContent className="p-6 text-center">
-                  <h4 className="font-semibold text-foreground mb-3">Prefer Email?</h4>
-                  <p className="text-muted-foreground mb-4">
-                    Send me a brief description of your project and I'll respond with initial thoughts and availability.
-                  </p>
-                  <Button variant="outline" className="w-full">
-                    patrick@hein.so
-                  </Button>
+                                         </TabsContent>
+                  </Tabs>
                 </CardContent>
               </Card>
             </div>

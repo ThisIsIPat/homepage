@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import CalendlyModal from "@/components/CalendlyModal";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,7 +11,6 @@ const Header = () => {
     { label: "Services", href: "#services" },
     //{ label: "Portfolio", href: "#portfolio" },
     //{ label: "Testimonials", href: "#testimonials" },
-    { label: "Book a Call", href: "#booking", isHighlight: true },
   ];
 
   return (
@@ -28,16 +28,14 @@ const Header = () => {
               <a
                 key={item.label}
                 href={item.href}
-                className={`transition-colors hover:text-primary ${
-                  item.isHighlight ? "hidden" : ""
-                }`}
+                className="transition-colors hover:text-primary"
               >
                 {item.label}
               </a>
             ))}
-            <Button variant="cta" size="lg">
+            <CalendlyModal variant="default" size="lg" className="bg-orange-500 hover:bg-orange-600 text-white">
               Book a Strategy Call
-            </Button>
+            </CalendlyModal>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -57,16 +55,19 @@ const Header = () => {
                 <a
                   key={item.label}
                   href={item.href}
-                  className={`py-2 transition-colors hover:text-primary ${
-                    item.isHighlight
-                      ? "bg-accent text-accent-foreground px-4 py-3 rounded-lg font-semibold text-center"
-                      : ""
-                  }`}
+                  className="py-2 transition-colors hover:text-primary"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}
                 </a>
               ))}
+              <CalendlyModal 
+                variant="default" 
+                size="default" 
+                className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-3 rounded-lg font-semibold text-center"
+              >
+                Book a Strategy Call
+              </CalendlyModal>
             </div>
           </nav>
         )}

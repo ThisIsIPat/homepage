@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Code, Database, Cloud } from "lucide-react";
+import CalendlyModal from "@/components/CalendlyModal";
 
 const HeroSection = () => {
   return (
@@ -25,13 +26,28 @@ const HeroSection = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pl-6">
-              <Button variant="hero" size="lg" className="group">
+              <CalendlyModal variant="default" size="lg" className="group bg-orange-500 hover:bg-orange-600 text-white">
                 Book a Strategy Call
                 <ArrowRight className="group-hover:translate-x-1 transition-transform" />
+              </CalendlyModal>
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="group border-2 hover:bg-gray-50"
+                onClick={() => {
+                  document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' });
+                  // Set the text tab as active after a short delay to allow scroll
+                  setTimeout(() => {
+                    const textTab = document.querySelector('[data-value="text"]') as HTMLElement;
+                    if (textTab) {
+                      textTab.click();
+                    }
+                  }, 500);
+                }}
+              >
+                Send a text
+                <ArrowRight className="group-hover:translate-x-1 transition-transform" />
               </Button>
-              {/*<Button variant="outline" size="lg">
-                View My Work
-              </Button>*/}
             </div>
 
             {/* Quick Stats/Highlights */}
@@ -61,8 +77,8 @@ const HeroSection = () => {
           <div className="relative">
             <div className="relative z-10">
               <img
-                src="/lovable-uploads/3258b639-3bab-4a12-bef5-307ef6ab21b0.png"
-                alt="Patrick Hein - Software Engineer & Startup Consultant"
+                src="/headshot-01.png"
+                alt="Patrick Hein - Software Engineer for Startups"
                 className="w-full max-w-md mx-auto rounded-2xl shadow-2xl"
               />
             </div>

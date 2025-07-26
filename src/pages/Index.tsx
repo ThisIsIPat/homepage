@@ -2,9 +2,9 @@ import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import ServicesSection from "@/components/ServicesSection";
+import BookingSection from "@/components/BookingSection";
 import PortfolioSection from "@/components/PortfolioSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
-import BookingSection from "@/components/BookingSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -15,9 +15,9 @@ const Index = () => {
         <HeroSection />
         <AboutSection />
         <ServicesSection />
+        <BookingSection />
         {/* <PortfolioSection /> */}
         {/* <TestimonialsSection /> */}
-        <BookingSection />
       </main>
       <Footer />
     </div>
